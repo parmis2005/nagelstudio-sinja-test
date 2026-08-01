@@ -4,6 +4,7 @@ import {
   mapsDirectionsUrl,
   mapsEmbedSrc,
 } from "@/lib/site-data";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Contact() {
   return (
@@ -69,6 +70,13 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+            </div>
+
+            <div>
+              <p className="mb-3 text-sm font-medium text-foreground/80">
+                Social Media
+              </p>
+              <SocialLinks showLabels />
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">

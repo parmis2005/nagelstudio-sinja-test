@@ -7,12 +7,28 @@ export const business = {
   city: "Kerken",
   phoneDisplay: "01575 7185533",
   phoneHref: "tel:+4915757185533",
-  bookingUrl: "#terminbuchung",
+  bookingUrl: "/#terminbuchung",
   instagramUrl: "https://www.instagram.com/nagelstudio_by_sinja/",
+  facebookUrl: "https://www.facebook.com/p/Nagelstudio-by-Sinja-61570482923111/",
   rating: 5.0,
   reviewCount: 9,
   mapsQuery: "Nagelstudio by Sinja, Friedensstraße 20, 47647 Kerken",
 } as const;
+
+export const socialLinks = [
+  {
+    id: "instagram",
+    label: "Instagram",
+    handle: "@nagelstudio_by_sinja",
+    href: business.instagramUrl,
+  },
+  {
+    id: "facebook",
+    label: "Facebook",
+    handle: "Nagelstudio by Sinja",
+    href: business.facebookUrl,
+  },
+] as const;
 
 export const fullAddress = `${business.street}, ${business.zip} ${business.city}`;
 
@@ -80,6 +96,41 @@ export type BookingService = {
   duration: string;
   price: string;
 };
+
+export type GalleryImage = {
+  src: string;
+  alt: string;
+  tall?: boolean;
+};
+
+export const galleryImages: GalleryImage[] = [
+  {
+    src: "/images/gallery-1.jpg",
+    alt: "Zartrosa Maniküre mit Glitzerakzent",
+    tall: true,
+  },
+  {
+    src: "/images/gallery-2.jpg",
+    alt: "Nagelpflege im Nagelstudio by Sinja",
+  },
+  {
+    src: "/images/gallery-3.jpg",
+    alt: "Vorbereitung einer Gel-Modellage",
+  },
+  {
+    src: "/images/gallery-4.jpg",
+    alt: "Präzises Nail Art Design",
+    tall: true,
+  },
+  {
+    src: "/images/gallery-5.jpg",
+    alt: "Frisch lackierte rote Fingernägel",
+  },
+  {
+    src: "/images/gallery-6.jpg",
+    alt: "Aushärten der Nägel unter der UV-Lampe",
+  },
+];
 
 export const bookingCategories: BookingCategory[] = [
   {

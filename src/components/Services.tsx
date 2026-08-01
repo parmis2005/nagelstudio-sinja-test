@@ -10,7 +10,7 @@ export default function Services() {
             Leistungen
           </span>
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-900 sm:text-4xl">
-            Unsere Leistungen
+            Meine Leistungen
           </h2>
           <p className="mt-4 text-foreground/70">
             Von klassischer Maniküre bis zu individuellem Nail Art Design –

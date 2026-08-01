@@ -1,13 +1,6 @@
 import Image from "next/image";
-
-const galleryImages = [
-  { src: "/images/gallery-1.jpg", alt: "Zartrosa Maniküre mit Glitzerakzent", tall: true },
-  { src: "/images/gallery-2.jpg", alt: "Nagelpflege im Nagelstudio by Sinja", tall: false },
-  { src: "/images/gallery-3.jpg", alt: "Vorbereitung einer Gel-Modellage", tall: false },
-  { src: "/images/gallery-4.jpg", alt: "Präzises Nail Art Design", tall: true },
-  { src: "/images/gallery-5.jpg", alt: "Frisch lackierte rote Fingernägel", tall: false },
-  { src: "/images/gallery-6.jpg", alt: "Aushärten der Nägel unter der UV-Lampe", tall: false },
-];
+import Link from "next/link";
+import { galleryImages } from "@/lib/site-data";
 
 export default function Gallery() {
   return (
@@ -18,7 +11,7 @@ export default function Gallery() {
             Galerie
           </span>
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-900 sm:text-4xl">
-            Einblicke in unsere Arbeit
+            Einblicke in meine Arbeit
           </h2>
           <p className="mt-4 text-foreground/70">
             Ein paar Impressionen aus dem Studioalltag – von natürlicher
@@ -44,6 +37,15 @@ export default function Gallery() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/galerie"
+            className="inline-flex rounded-full border border-rose-200 px-7 py-3 text-sm font-semibold text-rose-700 transition-colors hover:bg-rose-100"
+          >
+            Mehr Bilder ansehen
+          </Link>
         </div>
       </div>
     </section>

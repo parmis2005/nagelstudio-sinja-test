@@ -66,13 +66,13 @@ export default function DatenschutzPage() {
 
         <div>
           <h2 className="font-semibold text-foreground">
-            5. Instagram
+            5. Instagram und Facebook
           </h2>
           <p className="mt-2">
-            Wir verlinken auf unser Instagram-Profil. Beim Anklicken des
-            Links werden Sie zu Instagram (Meta Platforms Ireland Limited)
-            weitergeleitet, für das die dortigen Datenschutzbestimmungen
-            gelten.
+            Wir verlinken auf unsere Instagram- und Facebook-Profile. Beim
+            Anklicken der Links werden Sie zu den jeweiligen Angeboten von
+            Meta Platforms Ireland Limited weitergeleitet, für die die dortigen
+            Datenschutzbestimmungen gelten.
           </p>
         </div>
 
