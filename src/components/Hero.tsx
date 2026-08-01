@@ -1,20 +1,21 @@
-import Image from "next/image";
 import { business, fullAddress, mapsDirectionsUrl } from "@/lib/site-data";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="relative overflow-hidden bg-[#211b1d]">
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-1.jpg"
-          alt="Professionelle Maniküre im Nagelstudio by Sinja"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_30%]"
+        <video
+          className="h-full w-full object-cover object-center"
+          src="/video/home-hero.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-rose-900/80 via-rose-900/55 to-rose-900/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-rose-950/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/5" />
       </div>
 
       <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 sm:min-h-[92vh] lg:justify-center lg:px-8 lg:pb-24">
