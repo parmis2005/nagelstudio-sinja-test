@@ -24,31 +24,21 @@ export default function Services() {
             <a
               key={service.title}
               href={business.bookingUrl}
-              className={`group relative block min-h-[25rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/35 focus-visible:-translate-y-2 focus-visible:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 active:-translate-y-1 active:scale-[1.01] ${
-                index % 2 ? "lg:mt-8" : ""
-              }`}
+              className="group flex h-[25rem] flex-col overflow-hidden rounded-2xl bg-[#2a2022] ring-1 ring-white/10 transition-[box-shadow,ring-color] duration-300 hover:shadow-2xl hover:shadow-red-950/35 hover:ring-red-500/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
               aria-label={`${service.title} Termin buchen`}
             >
-              <Image
-                src={service.image}
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 25vw"
-                className="scale-110 object-cover opacity-35 blur-sm transition-transform duration-700 group-hover:scale-125 group-focus-visible:scale-125"
-                aria-hidden="true"
-              />
-              <div className="absolute inset-x-0 top-0 bottom-28 overflow-hidden">
+              <div className="relative h-64 shrink-0 overflow-hidden bg-[#211b1d]">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-contain transition-transform duration-700 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
+                  className="object-cover transition-[filter] duration-500 group-hover:brightness-110 group-hover:saturate-110 group-focus-visible:brightness-110 group-focus-visible:saturate-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/35 via-transparent to-transparent" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/92 via-[#211b1d]/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-5">
-                <span className="mb-3 inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-rose-100 ring-1 ring-white/15 backdrop-blur-sm">
+              <div className="relative flex flex-1 flex-col border-t border-white/10 bg-gradient-to-b from-[#3a2527] to-[#211b1d] p-5">
+                <span className="-mt-8 mb-6 inline-flex w-fit rounded-full bg-white/14 px-3 py-1 text-xs font-semibold text-rose-50 ring-1 ring-white/15 backdrop-blur-sm">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="font-serif-display text-2xl font-semibold text-white">
@@ -64,6 +54,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-auto h-px origin-left scale-x-0 bg-gradient-to-r from-red-500 via-red-300 to-transparent transition-transform duration-500 group-hover:scale-x-100 group-focus-visible:scale-x-100" />
               </div>
             </a>
           ))}

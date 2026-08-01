@@ -148,11 +148,11 @@ export default function Booking() {
       className="bg-gradient-to-b from-white via-rose-50/30 to-white py-14 sm:py-16"
     >
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-rose-500">
             Online Terminbuchung
           </span>
-          <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-950 sm:text-4xl">
+          <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-950 sm:text-4xl lg:whitespace-nowrap">
             Termin direkt auf der Website anfragen
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-foreground/65 sm:text-base">
