@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffaf8;
-  --foreground: #2b2320;
+  --background: #fffafa;
+  --foreground: #201516;
 }
 
 @theme inline {
@@ -11,21 +11,22 @@
   --font-sans: var(--font-poppins);
   --font-serif: var(--font-noto-serif);
 
-  --color-rose-50: #fdf3f2;
-  --color-rose-100: #fbe6e4;
-  --color-rose-200: #f5c9c8;
-  --color-rose-300: #eda3a8;
-  --color-rose-400: #e1798a;
-  --color-rose-500: #cd5470;
-  --color-rose-600: #b03a5c;
-  --color-rose-700: #922b4d;
-  --color-rose-800: #7a2542;
-  --color-rose-900: #4a1729;
+  --color-rose-50: #fff3f3;
+  --color-rose-100: #ffe1e1;
+  --color-rose-200: #ffc7c7;
+  --color-rose-300: #ff9c9c;
+  --color-rose-400: #f15f62;
+  --color-rose-500: #d92f35;
+  --color-rose-600: #b80f22;
+  --color-rose-700: #930c1d;
+  --color-rose-800: #680915;
+  --color-rose-900: #35070d;
+  --color-rose-950: #180406;
 
-  --color-sand-50: #fdfbf7;
-  --color-sand-100: #f8f1e7;
-  --color-sand-200: #efe1cd;
-  --color-sand-300: #e0c8a3;
+  --color-sand-50: #fbf7f6;
+  --color-sand-100: #f3ecea;
+  --color-sand-200: #e5d8d5;
+  --color-sand-300: #cdb8b2;
 
   --color-gold-400: #c8a45e;
   --color-gold-500: #b08d43;
@@ -62,4 +63,25 @@ html {
 
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
+}
+
+@keyframes polish-accent-drift {
+  0%,
+  100% {
+    transform: translate3d(-10px, 5px, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate3d(14px, -7px, 0) rotate(-2deg);
+  }
+}
+
+.animate-polish-accent {
+  animation: polish-accent-drift 6s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-polish-accent {
+    animation: none;
+  }
 }

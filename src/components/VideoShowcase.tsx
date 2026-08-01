@@ -10,9 +10,8 @@ export default function VideoShowcase() {
             Erlebe entspannte Nagelpflege in ruhiger Atmosphäre
           </h2>
           <p className="mt-5 max-w-lg text-rose-100/90 leading-relaxed">
-            Nimm dir eine Auszeit vom Alltag: In entspannter Umgebung kümmere
-            ich mich mit Ruhe, Sorgfalt und viel Liebe zum Detail um deine
-            Hände und Füße – für ein Ergebnis, das dich strahlen lässt.
+            Nimm dir eine Auszeit: Mit Ruhe, Sorgfalt und Liebe zum Detail
+            kümmere ich mich um deine Hände und Füße.
           </p>
         </div>
 

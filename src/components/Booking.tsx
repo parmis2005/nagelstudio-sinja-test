@@ -286,29 +286,74 @@ export default function Booking() {
               </label>
 
               <div
-                className="pointer-events-none mt-8 px-2 text-rose-600/80"
+                className="pointer-events-none relative mt-6 h-24 overflow-hidden rounded-b-2xl"
                 aria-hidden="true"
               >
                 <svg
-                  viewBox="0 0 900 90"
-                  className="h-14 w-full"
+                  viewBox="0 0 900 150"
+                  className="absolute inset-x-0 bottom-0 h-24 w-full"
                   preserveAspectRatio="none"
                 >
-                  <path
-                    d="M8 48 C 90 12, 142 82, 226 46 S 365 16, 448 50 S 596 82, 682 44 S 820 16, 892 48"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeWidth="5"
-                  />
-                  <path
-                    d="M8 63 C 92 28, 146 88, 228 60 S 366 32, 450 62 S 598 88, 684 58 S 822 34, 892 62"
-                    fill="none"
-                    opacity="0.28"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeWidth="3"
-                  />
+                  <defs>
+                    <linearGradient
+                      id="booking-polish"
+                      x1="0"
+                      x2="1"
+                      y1="1"
+                      y2="0"
+                    >
+                      <stop offset="0%" stopColor="#930c1d" />
+                      <stop offset="55%" stopColor="#b80f22" />
+                      <stop offset="100%" stopColor="#f15f62" />
+                    </linearGradient>
+                  </defs>
+                  <g className="animate-polish-accent">
+                    <path
+                      d="M-24 126 C 122 62, 208 132, 334 92 S 530 26, 672 58 S 798 92, 928 26"
+                      fill="none"
+                      opacity="0.2"
+                      stroke="url(#booking-polish)"
+                      strokeLinecap="round"
+                      strokeWidth="24"
+                    />
+                    <path
+                      d="M-20 124 C 118 72, 210 126, 334 96 S 532 38, 672 66 S 800 92, 926 38"
+                      fill="none"
+                      opacity="0.72"
+                      stroke="url(#booking-polish)"
+                      strokeLinecap="round"
+                      strokeWidth="7"
+                    />
+                    <ellipse
+                      cx="122"
+                      cy="96"
+                      fill="#b80f22"
+                      opacity="0.65"
+                      rx="10"
+                      ry="6"
+                      transform="rotate(-18 122 96)"
+                    />
+                    <ellipse
+                      cx="188"
+                      cy="120"
+                      fill="#f15f62"
+                      opacity="0.7"
+                      rx="7"
+                      ry="4"
+                      transform="rotate(-18 188 120)"
+                    />
+                    <ellipse
+                      cx="724"
+                      cy="52"
+                      fill="#b80f22"
+                      opacity="0.62"
+                      rx="8"
+                      ry="5"
+                      transform="rotate(-18 724 52)"
+                    />
+                    <circle cx="592" cy="60" fill="#ffc7c7" opacity="0.8" r="4" />
+                    <circle cx="626" cy="72" fill="#ffc7c7" opacity="0.55" r="3" />
+                  </g>
                 </svg>
               </div>
             </div>

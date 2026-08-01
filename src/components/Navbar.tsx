@@ -7,7 +7,7 @@ import { business } from "@/lib/site-data";
 const links = [
   { href: "/#leistungen", label: "Leistungen" },
   { href: "/galerie", label: "Galerie" },
-  { href: "/#ueber-uns", label: "Über uns" },
+  { href: "/#ueber-uns", label: "Über mich" },
   { href: "/#bewertungen", label: "Bewertungen" },
   { href: "/#kontakt", label: "Kontakt" },
 ];

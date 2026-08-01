@@ -21,8 +21,8 @@ const showcaseImages = [
 
 export default function Gallery() {
   return (
-    <section id="galerie" className="bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+    <section id="galerie" className="bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-rose-500">
             Galerie
@@ -36,9 +36,9 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-[1.75rem] bg-[#211b1d] p-3 shadow-2xl shadow-rose-950/15 ring-1 ring-rose-950/10 sm:p-4">
+        <div className="mt-10 overflow-hidden rounded-[1.5rem] bg-[#211b1d] p-2.5 shadow-2xl shadow-rose-950/15 ring-1 ring-rose-950/10 sm:p-3">
           <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="group relative min-h-[28rem] overflow-hidden rounded-[1.35rem] bg-rose-950 sm:min-h-[34rem]">
+            <div className="group relative min-h-[22rem] overflow-hidden rounded-[1.1rem] bg-rose-950 sm:min-h-[27rem]">
               <Image
                 src="/images/gallery-3.jpg"
                 alt="Nagelstudio by Sinja bei der Arbeit"
@@ -47,11 +47,11 @@ export default function Gallery() {
                 className="object-cover object-[50%_34%] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/95 via-[#211b1d]/25 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-200">
                   Studioalltag
                 </p>
-                <h3 className="mt-3 max-w-lg font-serif-display text-3xl font-semibold text-white sm:text-4xl">
+                <h3 className="mt-3 max-w-md font-serif-display text-2xl font-semibold text-white sm:text-3xl">
                   Präzise Arbeit, ruhige Atmosphäre und liebevolle Details.
                 </h3>
               </div>
@@ -61,7 +61,7 @@ export default function Gallery() {
               {showcaseImages.map((image, index) => (
                 <div
                   key={image.src}
-                  className={`group relative overflow-hidden rounded-[1.35rem] bg-rose-950 ${
+                  className={`group relative overflow-hidden rounded-[1.1rem] bg-rose-950 ${
                     index === 0 ? "sm:col-span-3 lg:col-span-1" : ""
                   }`}
                 >

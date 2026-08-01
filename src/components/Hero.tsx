@@ -1,5 +1,18 @@
 import { business, fullAddress, mapsDirectionsUrl } from "@/lib/site-data";
 
+function StarIcon() {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      className="h-3.5 w-3.5"
+      aria-hidden="true"
+    >
+      <path d="m10 1.4 2.44 5.28 5.78.68-4.27 3.95 1.13 5.7L10 14.16l-5.08 2.85 1.13-5.7-4.27-3.95 5.78-.68L10 1.4Z" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-[#211b1d]">
@@ -24,7 +37,9 @@ export default function Hero() {
         <div className="max-w-[40rem] animate-fade-up">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-white/30 backdrop-blur-sm">
             <span className="flex items-center gap-0.5 text-gold-400">
-              {"★★★★★"}
+              {Array.from({ length: 5 }).map((_, index) => (
+                <StarIcon key={index} />
+              ))}
             </span>
             <span>
               {business.rating.toFixed(1).replace(".", ",")} · {business.reviewCount}{" "}
