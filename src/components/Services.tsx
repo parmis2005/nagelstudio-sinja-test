@@ -21,18 +21,20 @@ export default function Services() {
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <div
+            <a
               key={service.title}
-              className={`group relative min-h-[27rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-1 ${
+              href={business.bookingUrl}
+              className={`group relative block min-h-[27rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/35 focus-visible:-translate-y-2 focus-visible:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 active:-translate-y-1 active:scale-[1.01] ${
                 index % 2 ? "lg:mt-8" : ""
               }`}
+              aria-label={`${service.title} Termin buchen`}
             >
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-110 group-focus-visible:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/95 via-[#211b1d]/55 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5">
@@ -56,7 +58,7 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

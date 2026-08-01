@@ -163,7 +163,7 @@ export default function Booking() {
       id="terminbuchung"
       className="bg-gradient-to-b from-white via-rose-50/30 to-white py-14 sm:py-16"
     >
-      <div className="mx-auto max-w-5xl px-5 lg:px-8">
+      <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-rose-500">
             Online Terminbuchung
@@ -178,7 +178,7 @@ export default function Booking() {
 
         <form
           onSubmit={handleSubmit}
-          className="mt-8 grid gap-4 rounded-[1.35rem] bg-white p-4 shadow-xl shadow-rose-950/10 ring-1 ring-rose-100 lg:grid-cols-[minmax(0,1fr)_300px]"
+          className="mt-8 grid items-start gap-4 rounded-[1.35rem] bg-white p-4 shadow-xl shadow-rose-950/10 ring-1 ring-rose-100 md:grid-cols-[minmax(0,1fr)_300px]"
         >
           <div className="space-y-4">
             <div className="rounded-2xl bg-rose-50/70 p-4 ring-1 ring-rose-100">
@@ -202,7 +202,7 @@ export default function Booking() {
                 ))}
               </div>
 
-              <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
                 {services.map((service) => (
                   <button
                     key={service.id}
@@ -235,7 +235,7 @@ export default function Booking() {
                 2. Termin
               </p>
 
-              <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+              <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
                 {days.map((day) => {
                   const slots = getSlots(day.dayIndex, categoryId);
                   const selected = selectedSlot?.dayId === day.id;
@@ -331,7 +331,7 @@ export default function Booking() {
             </div>
           </div>
 
-          <aside className="rounded-2xl bg-[#211b1d] p-4 text-white ring-1 ring-rose-950/20 lg:self-start">
+          <aside className="rounded-2xl bg-[#211b1d] p-4 text-white ring-1 ring-rose-950/20 md:sticky md:top-24 md:self-start">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-rose-300">
               Deine Auswahl
             </span>

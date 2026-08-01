@@ -1,6 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { galleryImages } from "@/lib/site-data";
+
+const showcaseImages = [
+  {
+    src: "/images/instagram/service-manicure-pink.jpg",
+    alt: "Pink French Nails mit Blütendetail",
+    label: "French & Pflege",
+  },
+  {
+    src: "/images/instagram/service-nailart-color.jpg",
+    alt: "Buntes Nail Art Design mit feinen Details",
+    label: "Nail Art",
+  },
+  {
+    src: "/images/instagram/service-gel-turquoise.jpg",
+    alt: "Türkise Gel-Modellage mit Glitzerlinien",
+    label: "Gel-Modellage",
+  },
+];
 
 export default function Gallery() {
   return (
@@ -19,24 +36,58 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-flow-dense grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-          {galleryImages.map((img) => (
-            <div
-              key={img.src}
-              className={`group relative overflow-hidden rounded-2xl bg-rose-50 ${
-                img.tall ? "row-span-2 aspect-[3/4]" : "aspect-square"
-              }`}
-            >
+        <div className="mt-12 overflow-hidden rounded-[1.75rem] bg-[#211b1d] p-3 shadow-2xl shadow-rose-950/15 ring-1 ring-rose-950/10 sm:p-4">
+          <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="group relative min-h-[28rem] overflow-hidden rounded-[1.35rem] bg-rose-950 sm:min-h-[34rem]">
               <Image
-                src={img.src}
-                alt={img.alt}
+                src="/images/gallery-3.jpg"
+                alt="Nagelstudio by Sinja bei der Arbeit"
                 fill
-                sizes="(max-width: 768px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 55vw"
+                className="object-cover object-[50%_34%] transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/95 via-[#211b1d]/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-rose-200">
+                  Studioalltag
+                </p>
+                <h3 className="mt-3 max-w-lg font-serif-display text-3xl font-semibold text-white sm:text-4xl">
+                  Präzise Arbeit, ruhige Atmosphäre und liebevolle Details.
+                </h3>
+              </div>
             </div>
-          ))}
+
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              {showcaseImages.map((image, index) => (
+                <div
+                  key={image.src}
+                  className={`group relative overflow-hidden rounded-[1.35rem] bg-rose-950 ${
+                    index === 0 ? "sm:col-span-3 lg:col-span-1" : ""
+                  }`}
+                >
+                  <div
+                    className={
+                      index === 0
+                        ? "aspect-[16/9] lg:aspect-[16/10]"
+                        : "aspect-[4/5] lg:aspect-[16/9]"
+                    }
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 42vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/75 via-transparent to-transparent" />
+                  <span className="absolute bottom-4 left-4 rounded-full bg-white/14 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur-sm">
+                    {image.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 text-center">
