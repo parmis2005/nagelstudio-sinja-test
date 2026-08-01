@@ -4,18 +4,20 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-[#211b1d]">
       <div className="absolute inset-0">
-        <video
-          className="h-full w-full object-cover object-center"
-          src="/video/home-hero.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/5" />
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[46vw] lg:max-w-[820px]">
+          <video
+            className="h-full w-full object-cover object-center"
+            src="/video/home-hero.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/62 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
       </div>
 
       <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 sm:min-h-[92vh] lg:justify-center lg:px-8 lg:pb-24">
