@@ -63,11 +63,9 @@ export default function Contact() {
                   <p className="text-foreground/80">Terminvereinbarung</p>
                   <a
                     href={business.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="font-medium text-rose-600 hover:text-rose-700"
                   >
-                    Online über TerminPanda buchen
+                    Direkt auf dieser Website buchen
                   </a>
                 </div>
               </div>
@@ -76,8 +74,6 @@ export default function Contact() {
             <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href={business.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="rounded-full bg-rose-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
               >
                 Termin buchen

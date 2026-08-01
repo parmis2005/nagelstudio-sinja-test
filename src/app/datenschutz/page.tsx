@@ -41,14 +41,13 @@ export default function DatenschutzPage() {
 
         <div>
           <h2 className="font-semibold text-foreground">
-            3. Terminbuchung über TerminPanda
+            3. Terminvereinbarung
           </h2>
           <p className="mt-2">
-            Für die Online-Terminbuchung wird der externe Dienst
-            TerminPanda genutzt. Beim Klick auf „Termin buchen“ verlassen
-            Sie diese Website und gelangen auf die Plattform des Anbieters
-            TerminPanda, für die dessen eigene Datenschutzbestimmungen
-            gelten.
+            Termine können über das Formular auf dieser Website ausgewählt
+            werden. Die eingegebenen Angaben dienen ausschließlich der
+            Terminabstimmung. Eine externe Online-Terminplattform wird hierfür
+            nicht eingebunden.
           </p>
         </div>
 

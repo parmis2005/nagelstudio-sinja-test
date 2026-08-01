@@ -63,12 +63,10 @@ export default function Footer() {
             Termin
           </p>
           <p className="mt-4 text-sm text-rose-200/90">
-            Termine nach Vereinbarung – bequem online buchen.
+            Termine direkt auf dieser Website auswählen und anfragen.
           </p>
           <a
             href={business.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="mt-4 inline-block rounded-full bg-rose-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-rose-500"
           >
             Termin buchen

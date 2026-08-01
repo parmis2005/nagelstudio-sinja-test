@@ -4,6 +4,7 @@ import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
+import Booking from "@/components/Booking";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Services />
+      <Booking />
       <Gallery />
       <About />
       <VideoShowcase />

@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-noto-serif);
 
   --color-rose-50: #fdf3f2;
   --color-rose-100: #fbe6e4;

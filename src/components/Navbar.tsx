@@ -61,8 +61,6 @@ export default function Navbar() {
           </a>
           <a
             href={business.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="rounded-full bg-rose-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
           >
             Termin buchen
@@ -117,8 +115,7 @@ export default function Navbar() {
             </a>
             <a
               href={business.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
               className="rounded-full bg-rose-600 px-5 py-3 text-center text-sm font-semibold text-white"
             >
               Termin buchen

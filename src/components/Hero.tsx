@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="absolute inset-y-0 right-0 w-full lg:w-[46vw] lg:max-w-[820px]">
           <video
             className="h-full w-full object-cover object-center"
-            src="/video/home-hero.mp4"
+            src="/video/home-hero-hq.mp4"
             autoPlay
             muted
             loop
@@ -20,9 +20,9 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 sm:min-h-[92vh] lg:justify-center lg:px-8 lg:pb-24">
-        <div className="max-w-2xl animate-fade-up">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-white/30 backdrop-blur-sm">
+      <div className="relative flex min-h-[88vh] flex-col justify-end px-5 pb-16 pt-32 sm:min-h-[92vh] lg:justify-center lg:px-10 lg:pb-24 xl:px-16">
+        <div className="max-w-[40rem] animate-fade-up">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-white/30 backdrop-blur-sm">
             <span className="flex items-center gap-0.5 text-gold-400">
               {"★★★★★"}
             </span>
@@ -32,24 +32,20 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-serif-display text-4xl font-semibold leading-tight text-white text-balance sm:text-5xl lg:text-6xl">
-            Dein Wohlfühlort für gepflegte Hände &amp; Füße
+          <h1 className="font-serif-display max-w-[34rem] text-[2.15rem] font-semibold leading-tight text-white text-balance sm:text-[2.45rem] lg:text-[3rem]">
+            Nagel- und Fußpflege mit Ruhe, Stil &amp; Liebe zum Detail
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
-            Willkommen im {business.name} in {business.city} – professionelle
-            Nagel- und Fußpflege in entspannter Atmosphäre, mit viel Liebe
-            zum Detail und höchsten Hygienestandards.
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Sorgfältige Pflege in ruhiger Atmosphäre.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-7 flex flex-wrap items-center gap-4">
             <a
               href={business.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full bg-rose-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-rose-900/30 transition-colors hover:bg-rose-700 sm:text-base"
             >
-              Termin online buchen
+              Termin buchen
             </a>
             <a
               href="#leistungen"
@@ -59,7 +55,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/85">
+          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/85">
             <a
               href={mapsDirectionsUrl}
               target="_blank"

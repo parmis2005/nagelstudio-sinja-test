@@ -30,8 +30,6 @@ export default function About() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href={business.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full bg-rose-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
             >
               Termin vereinbaren

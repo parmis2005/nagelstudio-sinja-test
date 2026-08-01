@@ -57,11 +57,9 @@ export default function Services() {
         <div className="mt-12 text-center">
           <a
             href={business.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-block rounded-full bg-rose-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-rose-700"
           >
-            Leistungen &amp; Preise auf TerminPanda ansehen
+            Termin für Leistungen buchen
           </a>
         </div>
       </div>

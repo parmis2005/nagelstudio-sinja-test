@@ -7,7 +7,7 @@ export const business = {
   city: "Kerken",
   phoneDisplay: "01575 7185533",
   phoneHref: "tel:+4915757185533",
-  bookingUrl: "https://terminpanda.de/anbieter/NagelstudiobySinja+p817im",
+  bookingUrl: "#terminbuchung",
   instagramUrl: "https://www.instagram.com/nagelstudio_by_sinja/",
   rating: 5.0,
   reviewCount: 9,
@@ -67,6 +67,90 @@ export type ServiceCategory = {
   image: string;
 };
 
+export type BookingCategory = {
+  id: "haende" | "fuesse" | "extras";
+  label: string;
+  description: string;
+};
+
+export type BookingService = {
+  id: string;
+  categoryId: BookingCategory["id"];
+  name: string;
+  duration: string;
+  price: string;
+};
+
+export const bookingCategories: BookingCategory[] = [
+  {
+    id: "haende",
+    label: "Hände",
+    description: "Maniküre, Gel-Modellage und gepflegte Naturnägel.",
+  },
+  {
+    id: "fuesse",
+    label: "Füße",
+    description: "Fußpflege und kosmetische Pediküre.",
+  },
+  {
+    id: "extras",
+    label: "Extras",
+    description: "Nail Art, Reparatur und besondere Details.",
+  },
+];
+
+export const bookingServices: BookingService[] = [
+  {
+    id: "klassische-manikure",
+    categoryId: "haende",
+    name: "Klassische Maniküre",
+    duration: "45 Min.",
+    price: "ab 35 €",
+  },
+  {
+    id: "gel-modellage",
+    categoryId: "haende",
+    name: "Gel-Modellage",
+    duration: "90 Min.",
+    price: "ab 55 €",
+  },
+  {
+    id: "refill",
+    categoryId: "haende",
+    name: "Refill / Auffüllen",
+    duration: "75 Min.",
+    price: "ab 45 €",
+  },
+  {
+    id: "kosmetische-fusspflege",
+    categoryId: "fuesse",
+    name: "Kosmetische Fußpflege",
+    duration: "50 Min.",
+    price: "ab 42 €",
+  },
+  {
+    id: "pedikure",
+    categoryId: "fuesse",
+    name: "Pediküre mit Pflege",
+    duration: "60 Min.",
+    price: "ab 48 €",
+  },
+  {
+    id: "nail-art",
+    categoryId: "extras",
+    name: "Nail Art",
+    duration: "30 Min.",
+    price: "ab 10 €",
+  },
+  {
+    id: "nagelreparatur",
+    categoryId: "extras",
+    name: "Nagelreparatur",
+    duration: "20 Min.",
+    price: "ab 8 €",
+  },
+];
+
 export const services: ServiceCategory[] = [
   {
     title: "Maniküre",
@@ -101,7 +185,7 @@ export const services: ServiceCategory[] = [
 export const features = [
   {
     title: "Schnelle Terminvergabe",
-    description: "Bequem online buchen über TerminPanda – ganz ohne Wartezeit am Telefon.",
+    description: "Termine direkt auf dieser Website auswählen und anfragen.",
   },
   {
     title: "Zentral in Kerken",
