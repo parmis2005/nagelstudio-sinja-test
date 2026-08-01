@@ -1,19 +1,18 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const showcaseImages = [
   {
-    src: "/images/instagram/service-manicure-pink.jpg",
+    src: "/images/instagram/service-manicure-clean.jpg",
     alt: "Pink French Nails mit Blütendetail",
     label: "French & Pflege",
   },
   {
-    src: "/images/instagram/service-nailart-color.jpg",
+    src: "/images/instagram/service-nailart-clean.jpg",
     alt: "Buntes Nail Art Design mit feinen Details",
     label: "Nail Art",
   },
   {
-    src: "/images/instagram/service-gel-turquoise.jpg",
+    src: "/images/instagram/service-gel-clean.jpg",
     alt: "Türkise Gel-Modellage mit Glitzerlinien",
     label: "Gel-Modellage",
   },
@@ -88,15 +87,6 @@ export default function Gallery() {
               ))}
             </div>
           </div>
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            href="/galerie"
-            className="inline-flex rounded-full border border-rose-200 px-7 py-3 text-sm font-semibold text-rose-700 transition-colors hover:bg-rose-100"
-          >
-            Mehr Bilder ansehen
-          </Link>
         </div>
       </div>
     </section>
