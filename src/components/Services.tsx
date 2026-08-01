@@ -44,11 +44,8 @@ export default function Services() {
                 <h3 className="font-serif-display text-2xl font-semibold text-white">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-rose-50/80">
-                  {service.description}
-                </p>
                 <ul className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-rose-50/85">
-                  {service.items.map((item) => (
+                  {service.items.slice(0, 1).map((item) => (
                     <li
                       key={item}
                       className="rounded-full bg-white/10 px-3 py-1.5 ring-1 ring-white/10 backdrop-blur-sm"

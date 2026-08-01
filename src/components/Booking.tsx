@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import Image from "next/image";
 import {
   bookingCategories,
   bookingServices,
@@ -30,21 +29,6 @@ const categoryOffsets: Record<BookingCategory["id"], number> = {
   fuesse: 1,
   extras: 2,
 };
-
-const bookingMoodImages = [
-  {
-    src: "/images/instagram/french.webp",
-    alt: "Nude French Nails aus dem Nagelstudio by Sinja",
-  },
-  {
-    src: "/images/instagram/blue-marble.webp",
-    alt: "Blaues Nageldesign aus dem Nagelstudio by Sinja",
-  },
-  {
-    src: "/images/instagram/leo.webp",
-    alt: "Goldenes Leo-Nail-Art-Design aus dem Nagelstudio by Sinja",
-  },
-];
 
 function createBookingDays() {
   const days: BookingDay[] = [];
@@ -301,32 +285,31 @@ export default function Booking() {
                 </select>
               </label>
 
-              <div className="mt-4 overflow-hidden rounded-2xl bg-[#211b1d] ring-1 ring-rose-950/10">
-                <div className="grid grid-cols-3">
-                  {bookingMoodImages.map((image) => (
-                    <div
-                      key={image.src}
-                      className="relative aspect-[5/2] overflow-hidden"
-                    >
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        sizes="(max-width: 768px) 30vw, 220px"
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/35 to-transparent" />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col gap-1 px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm font-semibold text-white">
-                    Inspiration für deinen Termin
-                  </p>
-                  <p className="text-xs text-rose-100/70">
-                    aktuelle Arbeiten aus dem Studio
-                  </p>
-                </div>
+              <div
+                className="pointer-events-none mt-8 px-2 text-rose-600/80"
+                aria-hidden="true"
+              >
+                <svg
+                  viewBox="0 0 900 90"
+                  className="h-14 w-full"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M8 48 C 90 12, 142 82, 226 46 S 365 16, 448 50 S 596 82, 682 44 S 820 16, 892 48"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeWidth="5"
+                  />
+                  <path
+                    d="M8 63 C 92 28, 146 88, 228 60 S 366 32, 450 62 S 598 88, 684 58 S 822 34, 892 62"
+                    fill="none"
+                    opacity="0.28"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeWidth="3"
+                  />
+                </svg>
               </div>
             </div>
           </div>
