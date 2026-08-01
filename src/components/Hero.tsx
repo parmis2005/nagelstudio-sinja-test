@@ -32,7 +32,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/62 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
       </div>
-
       <div className="relative flex min-h-[88vh] flex-col justify-end px-5 pb-16 pt-32 sm:min-h-[92vh] lg:justify-center lg:px-10 lg:pb-24 xl:px-16">
         <div className="max-w-[40rem] animate-fade-up">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-white/30 backdrop-blur-sm">

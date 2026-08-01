@@ -3,7 +3,7 @@ import { business, services } from "@/lib/site-data";
 
 export default function Services() {
   return (
-    <section id="leistungen" className="bg-[#211b1d] py-20 text-white sm:py-24">
+    <section id="leistungen" className="bg-[#4b030d] py-20 text-white sm:py-24">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-rose-500">
