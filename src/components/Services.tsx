@@ -24,19 +24,29 @@ export default function Services() {
             <a
               key={service.title}
               href={business.bookingUrl}
-              className={`group relative block min-h-[27rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/35 focus-visible:-translate-y-2 focus-visible:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 active:-translate-y-1 active:scale-[1.01] ${
+              className={`group relative block min-h-[25rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/35 focus-visible:-translate-y-2 focus-visible:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 active:-translate-y-1 active:scale-[1.01] ${
                 index % 2 ? "lg:mt-8" : ""
               }`}
               aria-label={`${service.title} Termin buchen`}
             >
               <Image
                 src={service.image}
-                alt={service.title}
+                alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-110 group-focus-visible:scale-110"
+                className="scale-110 object-cover opacity-35 blur-sm transition-transform duration-700 group-hover:scale-125 group-focus-visible:scale-125"
+                aria-hidden="true"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/95 via-[#211b1d]/55 to-transparent" />
+              <div className="absolute inset-x-0 top-0 bottom-28 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-contain transition-transform duration-700 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/92 via-[#211b1d]/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5">
                 <span className="mb-3 inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-rose-100 ring-1 ring-white/15 backdrop-blur-sm">
                   {String(index + 1).padStart(2, "0")}

@@ -208,28 +208,28 @@ export const services: ServiceCategory[] = [
     description:
       "Klassische und moderne Handpflege für gepflegte, gesunde Nägel.",
     items: ["Klassische Maniküre", "Nagelhautpflege", "Handmassage"],
-    image: "/images/instagram/service-manicure-clean.jpg",
+    image: "/images/instagram/service-manicure-display.jpg",
   },
   {
     title: "Gel- & Modellage",
     description:
       "Langlebige Gel-Modellagen und Verstärkungen in deiner Wunschform.",
     items: ["Gelaufbau", "French & Babyboomer", "Nachfüllen / Refill"],
-    image: "/images/instagram/service-gel-clean.jpg",
+    image: "/images/instagram/service-gel-display.jpg",
   },
   {
     title: "Nail Art & Design",
     description:
       "Individuelle Designs mit viel Liebe zum Detail – von schlicht bis auffällig.",
     items: ["Farbverläufe", "Glitzer & Steinchen", "Individuelle Designs"],
-    image: "/images/instagram/service-nailart-clean.jpg",
+    image: "/images/instagram/service-nailart-display.jpg",
   },
   {
     title: "Fußpflege",
     description:
       "Entspannende Fußpflege für gepflegte, gesunde Füße das ganze Jahr über.",
     items: ["Kosmetische Fußpflege", "Nagelpflege", "Pflegemassage"],
-    image: "/images/instagram/service-pedicure-clean.jpg",
+    image: "/images/instagram/service-pedicure-display.jpg",
   },
 ];
 

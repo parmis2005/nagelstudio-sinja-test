@@ -2,17 +2,17 @@ import Image from "next/image";
 
 const showcaseImages = [
   {
-    src: "/images/instagram/service-manicure-clean.jpg",
+    src: "/images/instagram/service-manicure-display.jpg",
     alt: "Pink French Nails mit Blütendetail",
     label: "French & Pflege",
   },
   {
-    src: "/images/instagram/service-nailart-clean.jpg",
+    src: "/images/instagram/service-nailart-display.jpg",
     alt: "Buntes Nail Art Design mit feinen Details",
     label: "Nail Art",
   },
   {
-    src: "/images/instagram/service-gel-clean.jpg",
+    src: "/images/instagram/service-gel-display.jpg",
     alt: "Türkise Gel-Modellage mit Glitzerlinien",
     label: "Gel-Modellage",
   },
