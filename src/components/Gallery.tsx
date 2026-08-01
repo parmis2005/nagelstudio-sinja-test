@@ -19,7 +19,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+        <div className="mt-12 grid grid-flow-dense grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
           {galleryImages.map((img) => (
             <div
               key={img.src}

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { business } from "@/lib/site-data";
-import SocialLinks from "@/components/SocialLinks";
 
 export default function About() {
   return (
@@ -35,7 +34,6 @@ export default function About() {
             >
               Termin vereinbaren
             </a>
-            <SocialLinks showLabels />
           </div>
         </div>
 

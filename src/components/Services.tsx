@@ -3,48 +3,54 @@ import { business, services } from "@/lib/site-data";
 
 export default function Services() {
   return (
-    <section id="leistungen" className="bg-white py-20 sm:py-24">
+    <section id="leistungen" className="bg-[#211b1d] py-20 text-white sm:py-24">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-rose-500">
             Leistungen
           </span>
-          <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-900 sm:text-4xl">
+          <h2 className="mt-3 font-serif-display text-3xl font-semibold text-white sm:text-4xl">
             Meine Leistungen
           </h2>
-          <p className="mt-4 text-foreground/70">
+          <p className="mt-4 text-rose-100/75">
             Von klassischer Maniküre bis zu individuellem Nail Art Design –
             alle Leistungen und aktuellen Preise findest du bei der
             Terminbuchung.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-rose-100 bg-sand-50 transition-shadow hover:shadow-lg"
+              className={`group relative min-h-[27rem] overflow-hidden rounded-2xl bg-rose-950 ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-1 ${
+                index % 2 ? "lg:mt-8" : ""
+              }`}
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-serif-display text-xl font-semibold text-rose-900">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#211b1d]/95 via-[#211b1d]/55 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <span className="mb-3 inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-semibold text-rose-100 ring-1 ring-white/15 backdrop-blur-sm">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-serif-display text-2xl font-semibold text-white">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/70">
+                <p className="mt-2 text-sm leading-relaxed text-rose-50/80">
                   {service.description}
                 </p>
-                <ul className="mt-4 space-y-1.5 text-sm text-foreground/70">
+                <ul className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-rose-50/85">
                   {service.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="h-1 w-1 shrink-0 rounded-full bg-rose-400" />
+                    <li
+                      key={item}
+                      className="rounded-full bg-white/10 px-3 py-1.5 ring-1 ring-white/10 backdrop-blur-sm"
+                    >
                       {item}
                     </li>
                   ))}

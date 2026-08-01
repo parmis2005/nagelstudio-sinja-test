@@ -33,7 +33,6 @@ export default function GaleriePage() {
               >
                 Termin buchen
               </Link>
-              <SocialLinks showLabels />
             </div>
           </div>
         </div>
@@ -41,17 +40,17 @@ export default function GaleriePage() {
 
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 lg:px-8">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {galleryImages.map((image, index) => (
+          <div className="grid grid-flow-dense grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {galleryImages.map((image) => (
               <div
                 key={image.src}
                 className={`group relative overflow-hidden rounded-2xl bg-rose-50 shadow-sm ring-1 ring-rose-100 ${
-                  index % 5 === 0 ? "sm:row-span-2" : ""
+                  image.tall ? "sm:row-span-2" : ""
                 }`}
               >
                 <div
                   className={
-                    index % 5 === 0 ? "aspect-[4/5] sm:h-full" : "aspect-square"
+                    image.tall ? "aspect-[4/5] sm:h-full" : "aspect-square"
                   }
                 >
                   <Image

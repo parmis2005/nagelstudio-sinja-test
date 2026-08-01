@@ -118,6 +118,10 @@ export const galleryImages: GalleryImage[] = [
     alt: "Vorbereitung einer Gel-Modellage",
   },
   {
+    src: "/images/gallery-6.jpg",
+    alt: "Aushärten der Nägel unter der UV-Lampe",
+  },
+  {
     src: "/images/gallery-4.jpg",
     alt: "Präzises Nail Art Design",
     tall: true,
@@ -125,10 +129,6 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery-5.jpg",
     alt: "Frisch lackierte rote Fingernägel",
-  },
-  {
-    src: "/images/gallery-6.jpg",
-    alt: "Aushärten der Nägel unter der UV-Lampe",
   },
 ];
 
@@ -208,28 +208,28 @@ export const services: ServiceCategory[] = [
     description:
       "Klassische und moderne Handpflege für gepflegte, gesunde Nägel.",
     items: ["Klassische Maniküre", "Nagelhautpflege", "Handmassage"],
-    image: "/images/gallery-3.jpg",
+    image: "/images/instagram/french.webp",
   },
   {
     title: "Gel- & Modellage",
     description:
       "Langlebige Gel-Modellagen und Verstärkungen in deiner Wunschform.",
     items: ["Gelaufbau", "French & Babyboomer", "Nachfüllen / Refill"],
-    image: "/images/gallery-1.jpg",
+    image: "/images/instagram/blue-marble.webp",
   },
   {
     title: "Nail Art & Design",
     description:
       "Individuelle Designs mit viel Liebe zum Detail – von schlicht bis auffällig.",
     items: ["Farbverläufe", "Glitzer & Steinchen", "Individuelle Designs"],
-    image: "/images/gallery-6.jpg",
+    image: "/images/instagram/leo.webp",
   },
   {
     title: "Fußpflege",
     description:
       "Entspannende Fußpflege für gepflegte, gesunde Füße das ganze Jahr über.",
     items: ["Kosmetische Fußpflege", "Nagelpflege", "Pflegemassage"],
-    image: "/images/gallery-5.jpg",
+    image: "/images/instagram/feet-fresh.webp",
   },
 ];
 
