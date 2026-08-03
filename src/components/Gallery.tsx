@@ -2,36 +2,36 @@ import Image from "next/image";
 
 const galleryImages = [
   {
-    src: "/images/instagram/service-manicure-display.jpg",
-    alt: "Pink French Nails mit Blütendetail",
+    src: "/images/nail-art-1.png",
+    alt: "Glitzernde altrosa Stiletto-Nägel mit Rautenmuster und Strasssteinen",
   },
   {
-    src: "/images/instagram/service-gel-display.jpg",
-    alt: "Türkise Gel-Modellage mit Glitzerlinien",
+    src: "/images/nail-art-2.png",
+    alt: "Buntes Meeresthema Nail Art mit Seestern und Quallen",
   },
   {
-    src: "/images/instagram/service-nailart-display.jpg",
-    alt: "Buntes Nail Art Design mit feinen Details",
+    src: "/images/nail-art-3.png",
+    alt: "Zartes Nude-Design mit weißen Blüten und Strasssteinen",
   },
   {
-    src: "/images/instagram/service-pedicure-display.jpg",
-    alt: "Fußpflege mit rotem Nagellack",
+    src: "/images/nail-art-4.png",
+    alt: "Sommerliches Sonnenuntergang-Design mit Palmen in Orange und Gelb",
   },
   {
-    src: "/images/instagram/spring.webp",
-    alt: "Frühlingshaftes Nageldesign",
+    src: "/images/nail-art-5.png",
+    alt: "Türkis-mint marmoriertes Nageldesign mit Glitzer",
   },
   {
-    src: "/images/instagram/blue-marble.webp",
-    alt: "Blau marmoriertes Nageldesign",
+    src: "/images/nail-art-6.png",
+    alt: "Leopardenprint French Nails",
   },
   {
-    src: "/images/instagram/cat-eye.webp",
-    alt: "Cat-Eye Nageldesign",
+    src: "/images/nail-art-7.png",
+    alt: "Klassische rote Pediküre",
   },
   {
-    src: "/images/instagram/nude.webp",
-    alt: "Nude Nageldesign",
+    src: "/images/nail-art-8.png",
+    alt: "Pediküre in kräftigem Magenta",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Gallery() {
           {galleryImages.map((image) => (
             <div
               key={image.src}
-              className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-950/10"
+              className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-950/10"
             >
               <Image
                 src={image.src}
