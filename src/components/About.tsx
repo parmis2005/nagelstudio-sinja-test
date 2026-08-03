@@ -45,6 +45,7 @@ export default function About() {
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-900 sm:text-4xl">
             {business.name}
           </h2>
+          <div className="mt-5 h-px w-16 bg-gradient-to-r from-rose-600 to-rose-300" />
           <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/75">
             <p>
               Willkommen in meinem Nagelstudio – deinem Wohlfühlort für
@@ -107,6 +108,14 @@ export default function About() {
               className="absolute -bottom-6 left-36 h-1.5 w-16 rounded-full bg-rose-400"
               aria-hidden="true"
             />
+            <div className="absolute -right-4 bottom-8 rounded-2xl bg-white px-6 py-5 text-center shadow-xl shadow-rose-950/20 ring-1 ring-rose-100">
+              <span className="block font-serif-display text-3xl font-semibold text-rose-600">
+                {business.rating.toFixed(1).replace(".", ",")}★
+              </span>
+              <span className="mt-1 block text-[0.65rem] uppercase tracking-[0.2em] text-foreground/60">
+                {business.reviewCount} Bewertungen
+              </span>
+            </div>
           </div>
         </div>
       </div>

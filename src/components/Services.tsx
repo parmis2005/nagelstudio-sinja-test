@@ -12,7 +12,8 @@ export default function Services() {
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-white sm:text-4xl">
             Meine Leistungen
           </h2>
-          <p className="mt-4 text-rose-100/75">
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-rose-400/70 to-transparent" />
+          <p className="mt-6 text-rose-100/75">
             Von klassischer Maniküre bis zu individuellem Nail Art Design –
             alle Leistungen und aktuellen Preise findest du bei der
             Terminbuchung.

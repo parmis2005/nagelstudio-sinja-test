@@ -9,11 +9,11 @@ const icons = [
 
 export default function Features() {
   return (
-    <section className="bg-sand-50 py-16 sm:py-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+    <section id="vorteile" className="bg-sand-50 py-16 sm:py-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 text-center sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {features.map((feature, i) => (
-          <div key={feature.title} className="flex flex-col items-start gap-4">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-rose-100 text-rose-700">
+          <div key={feature.title} className="group flex flex-col items-center gap-4">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-rose-100 text-rose-700 transition-colors group-hover:bg-rose-600 group-hover:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

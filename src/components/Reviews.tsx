@@ -34,7 +34,8 @@ export default function Reviews() {
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-rose-900 sm:text-4xl lg:whitespace-nowrap">
             Was unsere Kundinnen &amp; Kunden sagen
           </h2>
-          <div className="mt-5 flex items-center justify-center gap-3">
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-rose-600 to-rose-300" />
+          <div className="mt-6 flex items-center justify-center gap-3">
             <Stars count={Math.round(business.rating)} />
             <span className="text-lg font-semibold text-rose-900">
               {business.rating.toFixed(1).replace(".", ",")}

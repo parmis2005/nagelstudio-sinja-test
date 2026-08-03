@@ -9,7 +9,8 @@ export default function VideoShowcase() {
           <h2 className="mt-3 font-serif-display text-3xl font-semibold text-balance sm:text-4xl">
             Erlebe entspannte Nagelpflege in ruhiger Atmosphäre
           </h2>
-          <p className="mt-5 max-w-lg text-rose-100/90 leading-relaxed">
+          <div className="mt-5 h-px w-16 bg-gradient-to-r from-rose-300 to-transparent" />
+          <p className="mt-6 max-w-lg text-rose-100/90 leading-relaxed">
             Nimm dir eine Auszeit: Mit Ruhe, Sorgfalt und Liebe zum Detail
             kümmere ich mich um deine Hände und Füße.
           </p>

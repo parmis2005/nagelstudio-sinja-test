@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { business } from "@/lib/site-data";
 
@@ -15,28 +16,42 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const overlaysHero = pathname === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const transparent = overlaysHero && !scrolled;
+
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm"
-          : "bg-white/40 backdrop-blur-sm"
+      className={`${overlaysHero ? "fixed" : "sticky"} top-0 z-50 w-full transition-all duration-500 ${
+        transparent
+          ? "bg-transparent py-6"
+          : "bg-white/95 py-3 shadow-sm backdrop-blur-md"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
-        <Link
-          href="/#top"
-          className="font-serif-display text-lg font-semibold tracking-wide text-rose-800 sm:text-xl"
-        >
-          {business.name}
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 lg:px-8">
+        <Link href="/#top" className="flex flex-col leading-none">
+          <span
+            className={`font-serif-display text-lg font-semibold tracking-wide transition-colors sm:text-xl ${
+              transparent ? "text-white" : "text-rose-800"
+            }`}
+          >
+            {business.name}
+          </span>
+          <span
+            className={`mt-0.5 text-[0.65rem] uppercase tracking-[0.2em] transition-colors ${
+              transparent ? "text-white/75" : "text-rose-500"
+            }`}
+          >
+            {business.city} · {business.category.split(" in ")[0]}
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -44,7 +59,9 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 transition-colors hover:text-rose-600"
+                className={`text-xs font-semibold uppercase tracking-[0.15em] transition-colors hover:text-rose-500 ${
+                  transparent ? "text-white/90" : "text-foreground/80"
+                }`}
               >
                 {link.label}
               </Link>
@@ -55,7 +72,9 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={business.phoneHref}
-            className="text-sm font-medium text-foreground/80 hover:text-rose-600"
+            className={`text-sm font-medium transition-colors hover:text-rose-500 ${
+              transparent ? "text-white/90" : "text-foreground/80"
+            }`}
           >
             {business.phoneDisplay}
           </a>
@@ -72,8 +91,11 @@ export default function Navbar() {
           aria-label="Menü öffnen"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-rose-800 lg:hidden"
+          className={`flex h-10 w-10 items-center justify-center rounded-full lg:hidden ${
+            transparent ? "text-white" : "text-rose-800"
+          }`}
         >
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
