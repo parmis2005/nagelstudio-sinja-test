@@ -41,11 +41,10 @@ export default function Hero() {
 
         <h1 className="font-serif-display mt-6 text-[2.15rem] font-semibold leading-tight text-white text-balance sm:text-[2.6rem] lg:text-[3.4rem]">
           Nagel- und Fußpflege
-          <br />
-          <span className="italic font-medium text-rose-200">
-            mit Ruhe, Stil &amp; Liebe zum Detail
-          </span>
         </h1>
+        <p className="font-serif-display mt-2 whitespace-nowrap text-[1.25rem] italic font-medium text-rose-200 sm:text-[1.7rem] lg:text-[2.2rem]">
+          mit Ruhe, Stil &amp; Liebe zum Detail
+        </p>
 
         <div className="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-transparent via-rose-300/80 to-transparent" />
 
