@@ -97,7 +97,7 @@ export default function Contact() {
           <iframe
             src={mapsEmbedSrc}
             title={`Karte: ${business.name}`}
-            className="h-full w-full grayscale opacity-80"
+            className="h-full w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
